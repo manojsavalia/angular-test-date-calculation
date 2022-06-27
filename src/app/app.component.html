@@ -1,0 +1,20 @@
+<h4>Pay Date Calculation</h4>
+<div class="col-md-6 centeralign">
+  <div class="card centeralign addmargin" style="width: 18rem;">
+    <div class="card-body">
+      <label>Fund Date :</label> <input type="date" name="fundingDate" [(ngModel)]="payDate.fundDay" />
+      <br>
+      <label>Frequency :</label> <select [(ngModel)]="payDate.frequency" class="centeralign addmargin">
+        <option value="weekly">Weekly</option>
+        <option value="bi-weekly">Bi-Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <br>
+      <label>Has Direct Deposit ? </label><input type="checkbox" [(ngModel)]="payDate.hasDirectDiposit">
+      <br>
+      <label>Pay Day :</label> <input type="date" name="payDate" [(ngModel)]="payDate.payDate" />
+      <br>
+      <button (click)=calculateDate()>Generate Due Date</button>
+    </div>
+  </div>
+</div>
